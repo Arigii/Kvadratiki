@@ -3,33 +3,83 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:local="clr-namespace:WpfApp1" xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1035">
+        Title="Mainwindow" Height="450" Width="950" MinWidth="200" MinHeight="200">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-            <WrapPanel Grid.Row="0" Grid.Column="0" x:Name="Первая_врап" VerticalAlignment="Center" HorizontalAlignment="Left" ItemHeight="80" ItemWidth="80">
-                <TextBox Text="A" TextChanged="TextBox_TextChanged" Background="#FFF3F600" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Text="B" VerticalAlignment="Top" Width="70" TextChanged="TextBox_TextChanged" Background="Red" BorderBrush="#FFABADB3" Height="70" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalContentAlignment="Center"/>
-                <TextBox Text="C" TextChanged="TextBox_TextChanged" Background="#FF48C200" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Text="D" TextChanged="TextBox_TextChanged" Background="#FF0018F6" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Text="E" TextChanged="TextBox_TextChanged" Background="#FF7E7E7D" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                <TextBox Text="F" TextChanged="TextBox_TextChanged" Background="#FFE7E8BC" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            </WrapPanel>
-        <WrapPanel Grid.Row="0" Grid.Column="1" x:Name="Вторая_врап" ItemHeight="80" ItemWidth="80" HorizontalAlignment="Center" Margin="0,100,0,-100">
-            <TextBox Text="A" TextChanged="TextBox_TextChanged" Background="#FFF3F600" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Left" Text="B" VerticalAlignment="Top" Width="70" TextChanged="TextBox_TextChanged" Background="Red" BorderBrush="#FFABADB3" Height="70" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalContentAlignment="Center"/>
-            <TextBox Text="C" TextChanged="TextBox_TextChanged" Background="#FF48C200" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox Text="D" TextChanged="TextBox_TextChanged" Background="#FF0018F6" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox Text="E" TextChanged="TextBox_TextChanged" Background="#FF7E7E7D" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBox Text="F" TextChanged="TextBox_TextChanged" Background="#FFE7E8BC" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        </WrapPanel>
+        <Border  Grid.Row="0" Grid.ColumnSpan="7" Background="#FFD68300" />
+        <Border Grid.ColumnSpan="7" Background="#FF43FF93" Margin="0,72,0,72" Grid.RowSpan="3" />
+        <Border  Grid.Row="2" Grid.ColumnSpan="7" Background="#FF43FF93" Margin="0,72,0,0" Grid.RowSpan="2" />
+        <Border  Grid.Row="5" Grid.ColumnSpan="7" Background="#FF43FF93" />
+        <Border  Grid.Row="2" Grid.ColumnSpan="7" Background="#FFACACAC" />
+        <Border  Grid.Row="3" Grid.ColumnSpan="7" Background="#FF959595" Margin="0,72,0,72" Grid.RowSpan="3" />
+        <Label Content="Таблица №1" Foreground="White" Grid.ColumnSpan="7" Grid.Column="0" FontWeight="Bold" FontSize="36" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Наименование" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,72,0,72" Grid.RowSpan="3"/>
+        <Label Content="Запись" Grid.Column="1" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,72,0,72" Grid.RowSpan="3"/>
+        <Label Content="Архивное" Grid.Column="5" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,72,0,72" Grid.RowSpan="3"/>
+        <Label Content="Приоритетный" Grid.Column="4" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,72,0,72" Grid.RowSpan="3"/>
+        <Label Content="В работе" Grid.Row="1" Grid.Column="3" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Тип" Grid.Column="2" Grid.Row="1" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Насос 1" Grid.Row="2" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Насос 2" Grid.Row="3" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Насос 3" Grid.Row="4" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label Content="Насос 4" Grid.Row="5" Grid.Column="0" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox Text="0" Grid.Row="2" Grid.Column="1" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="5" Height="35" Width="100"/>
+        <TextBox Text="0" Grid.Row="3" Grid.Column="1" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="5" Height="35" Width="100"/>
+        <TextBox Text="0" Grid.Row="4" Grid.Column="1" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="5" Height="35" Width="100"/>
+        <TextBox Text="0" Grid.Row="5" Grid.Column="1" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="5" Height="35" Width="100"/>
+        <CheckBox Content="Да" Grid.Row="2" Grid.Column="5" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="4" Height="35" Width="100"/>
+        <CheckBox Content="Да" Grid.Row="3" Grid.Column="5" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="4" Height="35" Width="100"/>
+        <CheckBox Content="Да" Grid.Row="4" Grid.Column="5" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="4" Height="35" Width="100"/>
+        <CheckBox Content="Да" Grid.Row="5" Grid.Column="5" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="4" Height="35" Width="100"/>
+        <RadioButton Content="Да" Grid.Row="2" Grid.Column="4" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="3" Height="35" Width="100"/>
+        <RadioButton Content="Да" Grid.Row="3" Grid.Column="4" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="3" Height="35" Width="100"/>
+        <RadioButton Content="Да" Grid.Row="4" Grid.Column="4" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="3" Height="35" Width="100"/>
+        <RadioButton Content="Да" Grid.Row="5" Grid.Column="4" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="3" Height="35" Width="100"/>
+        <ToggleButton Content="Да" Grid.Row="2" Grid.Column="3" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="2" Height="35" Width="100"/>
+        <ToggleButton Content="Да" Grid.Row="3" Grid.Column="3" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="2" Height="35" Width="100"/>
+        <ToggleButton Content="Да" Grid.Row="4" Grid.Column="3" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="2" Height="35" Width="100"/>
+        <ToggleButton Content="Да" Grid.Row="5" Grid.Column="3" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Grid.ColumnSpan="2" Height="35" Width="100"/>
+        <ComboBox Grid.Row="2" Grid.Column="2" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Height="35" Width="100">
+            <sys:String>Type 1</sys:String>
+            <sys:String>Type 2</sys:String>
+            <sys:String>Type 3</sys:String>
+        </ComboBox>
+        <ComboBox Grid.Row="3" Grid.Column="2" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Height="35" Width="100">
+            <sys:String>Type 1</sys:String>
+            <sys:String>Type 2</sys:String>
+            <sys:String>Type 3</sys:String>
+        </ComboBox>
+        <ComboBox Grid.Row="4" Grid.Column="2" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Height="35" Width="100">
+            <sys:String>Type 1</sys:String>
+            <sys:String>Type 2</sys:String>
+            <sys:String>Type 3</sys:String>
+        </ComboBox>
+        <ComboBox Grid.Row="5" Grid.Column="2" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Height="35" Width="100">
+            <sys:String>Type 1</sys:String>
+            <sys:String>Type 2</sys:String>
+            <sys:String>Type 3</sys:String>
+        </ComboBox>
+        <Button Content="Обработать" Grid.Row="2" Grid.Column="6" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Background="#FFD68300" Height="35" Width="100"/>
+        <Button Content="Обработать" Grid.Row="3" Grid.Column="6" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Background="#FFD68300" Height="35" Width="100"/>
+        <Button Content="Обработать" Grid.Row="4" Grid.Column="6" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Background="#FFD68300" Height="35" Width="100"/>
+        <Button Content="Обработать" Grid.Row="5" Grid.Column="6" FontWeight="Bold" FontSize="16" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Center" MinWidth="100" MinHeight="35" Background="#FFD68300" Height="35" Width="100"/>
     </Grid>
- 
 </Window>
