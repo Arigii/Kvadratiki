@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1035">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+            <WrapPanel Grid.Row="0" Grid.Column="0" x:Name="Первая_врап" VerticalAlignment="Center" HorizontalAlignment="Left" ItemHeight="80" ItemWidth="80">
+                <TextBox Text="A" TextChanged="TextBox_TextChanged" Background="#FFF3F600" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox HorizontalAlignment="Left" Text="B" VerticalAlignment="Top" Width="70" TextChanged="TextBox_TextChanged" Background="Red" BorderBrush="#FFABADB3" Height="70" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalContentAlignment="Center"/>
+                <TextBox Text="C" TextChanged="TextBox_TextChanged" Background="#FF48C200" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Text="D" TextChanged="TextBox_TextChanged" Background="#FF0018F6" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Text="E" TextChanged="TextBox_TextChanged" Background="#FF7E7E7D" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <TextBox Text="F" TextChanged="TextBox_TextChanged" Background="#FFE7E8BC" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            </WrapPanel>
+        <WrapPanel Grid.Row="0" Grid.Column="1" x:Name="Вторая_врап" ItemHeight="80" ItemWidth="80" HorizontalAlignment="Center" Margin="0,100,0,-100">
+            <TextBox Text="A" TextChanged="TextBox_TextChanged" Background="#FFF3F600" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Text="B" VerticalAlignment="Top" Width="70" TextChanged="TextBox_TextChanged" Background="Red" BorderBrush="#FFABADB3" Height="70" TextWrapping="WrapWithOverflow" TextAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Text="C" TextChanged="TextBox_TextChanged" Background="#FF48C200" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox Text="D" TextChanged="TextBox_TextChanged" Background="#FF0018F6" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox Text="E" TextChanged="TextBox_TextChanged" Background="#FF7E7E7D" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBox Text="F" TextChanged="TextBox_TextChanged" Background="#FFE7E8BC" BorderBrush="#FFABADB3" TextAlignment="Center" VerticalContentAlignment="Center" Height="70" Width="70" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </WrapPanel>
+    </Grid>
+ 
+</Window>
